@@ -1,0 +1,11 @@
+{
+  "buildCommand": "ng build --configuration production",
+  "outputDirectory": "dist/emp-4",
+  "framework": null,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
