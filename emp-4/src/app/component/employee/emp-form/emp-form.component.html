@@ -1,0 +1,79 @@
+
+<form [formGroup]="empForm" (ngSubmit)="OnAddEmp()">
+  <div class="card">
+    <h2>{{ isinEditMode? "update_emp" : "Add_Emp"}}</h2>
+    <div class="card-body">
+
+      <div class="form-group">
+        <label>First Name <sup class="text-danger">*</sup></label>
+        <input type="text" formControlName="Fname" class="form-control">
+
+      </div>
+
+
+      <div class="form-group">
+        <label>Last Name <sup class="text-danger">*</sup></label>
+        <input type="text" formControlName="Lname" class="form-control">
+
+       
+      </div>
+
+    
+      <div class="form-group">
+        <label>Email <sup class="text-danger">*</sup></label>
+        <input type="text" formControlName="Email" class="form-control">
+
+        
+
+       
+      </div>
+
+      <div class="form-group">
+        <label>Address <sup class="text-danger">*</sup></label>
+        <input type="text" formControlName="Address" class="form-control">
+
+       
+      </div>
+
+  
+      <div class="form-group">
+        <label>Contact <sup class="text-danger">*</sup></label>
+        <input type="text" formControlName="Contact" class="form-control">
+
+       
+
+       
+      </div>
+
+   
+      <div class="form-group">
+        <select formControlName="Role" class="form-control">
+          <option value="Front End Devloper">Front End Devloper</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Back End Devloper">Back End Devloper</option>
+          <option value="Data Scientist">Data Scientist</option>
+        </select>
+
+       
+      </div>
+
+  
+      <button 
+        *ngIf=" !isinEditMode"
+        class="btn btn-outline-primary btn-sm btn-block">
+        Add Employee
+      </button>
+
+      <button 
+        type="button"
+        *ngIf=" isinEditMode"
+        (click)="OnUpdateEmp()"
+        class="btn btn-outline-warning btn-sm btn-block">
+        Update Employee
+      </button>
+
+    </div>
+  </div>
+
+
+</form>
